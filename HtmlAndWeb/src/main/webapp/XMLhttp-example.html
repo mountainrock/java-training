@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XMLHttpRequest Example</title>
+</head>
+<body>
+  <button id="fetchButton">Fetch Data</button>
+  <div id="output"></div>
+
+  <script>
+    // Function to make an XMLHttpRequest
+    function fetchData() {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://www.keycdn.com', true);
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          const responseData = (xhr.responseText);
+          document.getElementById('output').innerHTML = responseData;
+        } else {
+          console.error('Request failed:', xhr.status, xhr.statusText);
+        }
+      };
+
+      xhr.onerror = function () {
+        console.error('Request failed');
+      };
+
+      xhr.send();
+    }
+
+    // Attach the event listener to the button
+    document.getElementById('fetchButton').addEventListener('click', fetchData);
+  </script>
+</body>
+</html>

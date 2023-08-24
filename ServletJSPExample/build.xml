@@ -1,0 +1,49 @@
+<project name="WebAppBuild" default="build" basedir=".">
+
+    <!-- Define properties -->
+    <property name="src.dir" value="src" />
+    <property name="build.dir" value="build" />
+    <property name="web.dir" value="${build.dir}/web" />
+    <property name="web.inf.dir" value="${web.dir}/WEB-INF" />
+    <property name="classes.dir" value="${web.inf.dir}/classes" />
+    <property name="lib.dir" value="${web.inf.dir}/lib" />
+    <property name="war.file" value="MyWebApp.war" />
+
+    <!-- Create necessary directories -->
+    <target name="init">
+        <mkdir dir="${web.inf.dir}" />
+        <mkdir dir="${classes.dir}" />
+        <mkdir dir="${lib.dir}" />
+    </target>
+
+    <!-- Compile Java source files -->
+    <target name="compile" depends="init">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" />
+    </target>
+
+    <!-- Copy resources -->
+    <target name="copy-resources" depends="compile">
+        <copy todir="${web.dir}">
+            <fileset dir="${src.dir}" excludes="**/*.java" />
+        </copy>
+    </target>
+
+    <!-- Build WAR file -->
+    <target name="war" depends="copy-resources">
+        <war destfile="${war.file}" webxml="${web.inf.dir}/web.xml">
+            <fileset dir="${web.dir}" />
+            <lib dir="${lib.dir}" />
+            <classes dir="${classes.dir}" />
+        </war>
+    </target>
+
+    <!-- Clean build artifacts -->
+    <target name="clean">
+        <delete dir="${build.dir}" />
+        <delete file="${war.file}" />
+    </target>
+
+    <!-- Default target -->
+    <target name="build" depends="war" />
+
+</project>

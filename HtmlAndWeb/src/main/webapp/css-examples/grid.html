@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- 
+	We create a container element with the class grid-container.
+Inside the container, we have six grid items with the class item.
+We use the CSS display: grid; property to define the container as a grid container.
+grid-template-columns: repeat(3, 1fr); specifies that we want three columns with equal width.
+gap: 10px; adds a gap of 10 pixels between grid items.
+The item class styles the appearance of each grid item, giving it a light blue background, padding, and center-aligned text.
+This example creates a 3-column grid layout with equal column widths and a gap between items.  
+-->
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="grid-container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+  <div class="item">5</div>
+  <div class="item">6</div>
+</div>
+
+</body>
+
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  gap: 10px; /* Gap between grid items */
+}
+
+.item {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+}
+
+</style>
+</html>

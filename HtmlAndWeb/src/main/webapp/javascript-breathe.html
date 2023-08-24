@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Breathing Exercise</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    #count  {
+      font-size: 208px;
+      margin-top: 20px;
+    }
+    #instructions{
+		font-size: 58px;
+	}
+  </style>
+</head>
+<body>
+  <h1>Breathing Exercise</h1>
+  <button id="startButton">Start</button>
+  <button id="stopButton">Stop</button>
+  <div id="count">0</div>
+  <div id="instructions"></div>
+
+  <script>
+    var count = 0;
+    var interval;
+    var stage = 'inhale';
+
+    var countDisplay = document.getElementById('count');
+    var instructionsDisplay = document.getElementById('instructions');
+    var startButton = document.getElementById('startButton');
+    var stopButton = document.getElementById('stopButton');
+
+    function updateDisplay(message) {
+      countDisplay.textContent = count;
+      instructionsDisplay.textContent = message;
+    }
+
+    function breathe() {
+      count++;
+      if (count > 4) {
+        count = 1;
+        if (stage === 'inhale') {
+          stage = 'hold';
+        } else if (stage === 'hold') {
+          stage = 'exhale';
+        } else {
+          stage = 'inhale';
+        }
+      }
+
+     if (stage === 'inhale') {
+	    updateDisplay('Inhale');
+    	document.body.style.backgroundColor = '#c7eefe';
+	  } else if (stage === 'hold') {
+	    updateDisplay('Hold for 4 seconds');
+	    document.body.style.backgroundColor = '#d8fec7';
+	  } else {
+	    updateDisplay('Exhale');
+	    document.body.style.backgroundColor = '#ffe6b9';
+	  }
+	  
+    }
+
+    startButton.addEventListener('click', () => {
+      startButton.disabled = true;
+      stopButton.disabled = false;
+      interval = setInterval(breathe, 1000);
+    });
+
+    stopButton.addEventListener('click', () => {
+      clearInterval(interval);
+      count = 0; // Reset count
+      stage = 'inhale'; // Reset stage
+      updateDisplay('');
+      startButton.disabled = false;
+      stopButton.disabled = true;
+      document.body.style.backgroundColor = ''
+    });
+    
+   
+  </script>
+</body>
+</html>
+
+<!--
+This version of the program will increment the count from 1 to 4 seconds during each stage (inhale, hold, exhale), and it will cycle through the stages accordingly. 
+
+-->

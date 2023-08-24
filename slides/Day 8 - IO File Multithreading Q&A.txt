@@ -1,0 +1,41 @@
+I/O (Input/Output) :
+1.  What is I/O in Java?
+    I/O stands for Input/Output and involves the transfer of data between an application and external sources like files, streams, or network connections.
+2.  What are the two main types of I/O in Java?
+    The two main types are Byte Streams (for binary data) and Character Streams (for text data).
+3.  What is the difference between Byte Streams and Character Streams?
+    Byte Streams deal with raw binary data, while Character Streams handle character data (text) and perform character encoding/decoding.
+
+
+File Handling :
+1.  How do you read data from a file in Java?
+    By using classes like `FileInputStream` and `BufferedReader`.
+2.  How do you write data to a file in Java?
+    By using classes like `FileOutputStream` and `BufferedWriter`.
+3.  What is the purpose of the `try-with-resources` statement?
+    It ensures that resources like file streams are automatically closed after their associated code block.
+
+Multithreading :
+1.  What is a thread in Java?
+    A thread is the smallest unit of execution that can run concurrently with other threads within the same process. 
+    A thread is a lightweight subprocess, the smallest unit of processing. It is a separate path of execution.
+
+2.  How do you create a thread in Java?
+    By extending the `Thread` class or 
+    implementing the `Runnable` interface
+
+3.  What is synchronization in multithreading?
+    Synchronization is used to control access to shared resources among multiple threads to prevent data corruption.
+
+4.  What is the difference between `synchronized` methods and `synchronized` blocks?
+    `synchronized` methods lock the entire method, while `synchronized` blocks allow more fine-grained control by locking specific sections of code.
+
+5.  What is a deadlock?
+    A deadlock occurs when two or more threads are blocked waiting for each other to release resources, leading to a standstill.
+6.  What is a thread pool?
+    A thread pool is a collection of pre-created threads that are reused to execute tasks, improving performance and reducing thread creation overhead.
+    
+7.  What is the difference between `start()` and `run()` methods of a Thread class?
+    `start()` is used to begin a new thread's execution, while `run()` is the entry point for the code to be executed in the new thread.
+8.  What is the purpose of the `join()` method in Java threads?
+    The `join()` method is used to make a calling thread wait for a specified thread to complete its execution.

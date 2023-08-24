@@ -1,0 +1,49 @@
+Here are some basic Java interview questions along with their answers:
+
+
+1. What is Java, and what are its key features?
+
+Java is a high-level, object-oriented programming language developed by Sun Microsystems (now owned by Oracle). It is known for its "Write Once, Run Anywhere" (WORA) capability due to its platform independence.
+Key features of Java include:
+    Object-Oriented: Everything in Java is an object, promoting code reusability and modularity.
+    Platform Independence: Java code can run on any platform with the help of the Java Virtual Machine (JVM).
+    Simple and Easy to Learn: Java has a clean syntax and is beginner-friendly.
+    Robust and Secure: Java's strict type checking and memory management make it robust and secure.
+    Multithreading: Java supports concurrent programming, allowing the execution of multiple threads simultaneously.
+    High Performance: Java uses Just-In-Time (JIT) compilation to achieve high performance.
+
+
+2. Explain the differences between JDK, JRE, and JVM.
+    JDK (Java Development Kit) is a software development kit that includes tools necessary to develop and compile Java applications.
+    JRE (Java Runtime Environment) is an environment that enables Java applications to run but does not include development tools.
+    JVM (Java Virtual Machine) is an abstract machine that provides the runtime environment to execute Java bytecode. It is responsible for converting bytecode into machine code.
+
+3. What is a class and an object in Java?
+    A class is a blueprint or template for creating objects. It defines the structure and behavior of objects.
+    An object is an instance of a class, representing a real-world entity with its state and behavior.
+
+4. How do you create an instance (object) of a class in Java?
+    To create an object, you use the new keyword followed by the class name and parentheses, like this:
+    java
+    Copy code
+    MyClass myObject = new MyClass();
+
+5. What are constructors in Java, and what is their purpose?
+    Constructors are special methods in a class used to initialize objects when they are created.
+    Their purpose is to set initial values to object attributes and prepare the object for use.
+
+6. What is the difference between static and non-static methods in Java?
+    Static methods belong to the class and can be called without creating an instance of the class.
+    Non-static methods are tied to object instances and can be called only on objects of the class.
+
+
+7. Explain the significance of the public static void main(String[] args) method in Java.
+    The main method is the entry point of a Java program and is called when the program is executed.
+    It must be declared as public, static, and void, and it takes a String array (args) as a parameter to handle command-line arguments.
+
+8. What are access modifiers (public, protected, private, and default) in Java, and how do they affect class members' visibility?
+    Access modifiers control the visibility or accessibility of class members (variables and methods).
+    public: The member is accessible from any class.
+    protected: The member is accessible within the same package and subclasses.
+    private: The member is accessible only within the same class.
+    Default (no modifier): The member is accessible within the same package.

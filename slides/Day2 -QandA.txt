@@ -1,0 +1,85 @@
+ Questions and Answers: Operators, Conditional Statements, and For Loops in Java
+
+Operators:
+
+1. What are the different types of operators in Java?
+   Java has several types of operators:
+     * Arithmetic Operators: +, -, *, /, % (modulus)
+     * Relational Operators: ==, !=, >, <, >=, <=
+     * Logical Operators: && (AND), || (OR), ! (NOT)
+     * Assignment Operators: =, +=, -=, *=, /=, %=
+     * Increment and Decrement Operators: ++, --
+     * Conditional (Ternary) Operator: ?:
+
+Conditional Statements:
+
+2. Explain the if-else statement in Java with an example.
+   The if-else statement allows you to execute different blocks of code based on a condition.
+  Example:
+   
+   int age = 20;
+   if (age >= 18) {
+       System.out.println("You are elder");
+   } else {
+       System.out.println("You are a child.");
+   }
+   
+
+3. What is the difference between the if-else statement and the switch statement?
+   The if-else statement is used for simple conditional checks based on true/false conditions.
+   The switch statement is used for multi-way branching based on different values of a variable.
+
+4. How do you handle multiple conditions using the else if ?
+    The else if  allows you to check multiple conditions one after the other until a true condition is found.
+    Example:
+   
+   int score = 85;
+   if (score >= 90) {
+       System.out.println("Excellent!");
+   } else if (score >= 80) {
+       System.out.println("Good job!");
+   } else if (score >= 70) {
+       System.out.println("Keep it up!");
+   } else {
+       System.out.println("You can do better!");
+   }
+   
+
+For Loops:
+
+5. Explain the basic for loop in Java with an example.
+    The basic for loop is used for iterating a block of code a specific number of times.Repeating
+    Example:
+   
+   for (int i = 1; i <= 5; i++) {
+       System.out.println("Iteration #" + i);
+   }
+
+  int i=1;
+
+   
+6. How do you use the enhanced for loop (for-each loop) in Java?
+   The enhanced for loop is used to iterate over elements in an array or a collection.
+   * Example:
+   
+   int[] numbers = {1, 2, 3, 4, 5};
+   for (int num : numbers) {
+        System.out.print(num + " ");
+   }
+   // Output: 1 2 3 4 5
+   
+
+7. What is the difference between the break and continue statements in a loop?
+    The `break` statement is used to exit the loop prematurely when a certain condition is met.
+    The `continue` statement is used to skip the current iteration and move to the next iteration in the loop.
+
+8. How do you implement nested for loops?
+    Nested for loops are used to create complex patterns or perform nested iterations.
+    Example:
+   
+   for (int i = 1; i <= 3; i++) {
+       for (int j = 1; j <= 3; j++) {
+           System.out.println("i: " + i + ", j: " + j);
+       }
+   }
+   

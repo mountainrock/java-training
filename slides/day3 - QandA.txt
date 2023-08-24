@@ -1,0 +1,61 @@
+Questions and Answers for while, do-while, and switch in Java
+
+While Loop:
+
+Q1: What is a while loop in Java?
+A1: A while loop is a control flow statement in Java that repeatedly executes a block of code as long as a given condition is true.
+
+Q2: How is a while loop structured?
+A2: The syntax of a while loop is as follows:
+
+while (condition) {
+    // Code to be executed repeatedly
+}
+
+
+Q3: What happens if the condition in a while loop is initially false?
+A3: If the condition is initially false, the code inside the loop will not execute at all.
+
+Do-While Loop:
+
+Q4: What is a do-while loop in Java?
+A4: A do-while loop is similar to the while loop, but it guarantees that the block of code is executed at least once, regardless of the condition.
+
+Q5: How is a do-while loop structured?
+A5: The syntax of a do-while loop is as follows:
+
+do {
+    // Code to be executed repeatedly
+} while (condition);
+
+
+Q6: What is the main difference between while and do-while loops?
+A6: The key difference is that the do-while loop guarantees at least one execution of the loop body before checking the condition, while the while loop checks the condition first and may not execute the loop body at all if the condition is false from the beginning.
+
+Switch Statement:
+
+Q7: What is the switch statement in Java?
+A7: The switch statement is a control flow statement in Java used to select one of many code blocks to be executed based on the value of an expression.
+
+Q8: What is the structure of a switch statement?
+A8: The syntax of a switch statement is as follows:
+
+switch (expression) {
+    case value1:
+        // Code to be executed if expression matches value1
+        break;
+    case value2:
+        // Code to be executed if expression matches value2
+        break;
+    // ...
+    default:
+        // Code to be executed if expression doesn't match any case
+        break;
+}
+
+
+Q9: Can the expression in a switch statement be of any data type?
+A9: The expression in a switch statement can be of byte, short, char, int, String, and enum types in Java.
+
+Q10: What happens if there is no break statement after a case in a switch statement?
+A10: If there is no break statement after a case, the execution will "fall through" to the next case, and the code in that case will also be executed until a break statement is encountered or the switch block ends.

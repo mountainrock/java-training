@@ -1,0 +1,70 @@
+ StringReader
+
+1. What is the purpose of StringReader in Java?
+    StringReader is a class in Java that allows reading characters from a String as if it were an input stream.
+    It is useful when you need to treat a String as a stream for reading character data.
+
+2. How do you create an instance of StringReader in Java?
+    You can create an instance of StringReader by passing the String data to be read as the constructor argument. For example:
+   
+   String data = "Hello, World!";
+   StringReader reader = new StringReader(data);
+   
+
+3. What exception does StringReader.read() method throw, and why?
+    The StringReader.read() method throws IOException. This is because the read() method reads characters from the String, and any I/O operation can potentially throw an IOException.
+
+Sorting
+1. What is the time complexity of popular sorting algorithms like QuickSort, MergeSort, and BubbleSort?
+      QuickSort: Average-case O(n log n), Worst-case O(n^2).
+      MergeSort: O(n log n) in all cases.
+      BubbleSort: O(n^2) in all cases.
+
+3. When is it appropriate to use each type of sorting algorithm?
+    QuickSort is suitable for large data sets and average-case performance. 
+    MergeSort is preferred when stability is required or when dealing with linked lists. 
+    BubbleSort is useful for small data sets or when simplicity is more critical than efficiency.
+
+ Hashing
+
+1. Explain what hashing is and how it works.
+    Hashing is the process of converting data into a fixed-size value or key, typically represented as an integer. Hashing functions take input data and produce a hash code that is used to index or locate the data in a hash-based data structure like HashMap or HashSet.
+
+2. What are the characteristics of a good hashing function?
+    A good hashing function should:
+      Produce a uniform distribution of hash codes.
+      Minimize hash collisions (two different inputs producing the same hash code).
+      Be efficient to compute.
+
+3. What is a hash collision?
+    A hash collision occurs when two different inputs produce the same hash code.
+
+
+HashCode
+
+1. Why is it essential to override the hashCode() method when overriding the equals() method?
+    When you override the equals() method, it is essential to override the hashCode() method to maintain the general contract between the two. The contract states that if two objects are equal according to equals(), their hash codes must also be equal according to hashCode(). This ensures proper functioning of hash-based data structures.
+
+2. What is the general contract between hashCode() and equals()?
+    The general contract between hashCode() and equals() is that equal objects must have the same hash code. However, two objects with the same hash code are not necessarily equal.
+
+ Recursion
+
+1. What is recursion, and how does it work?
+    Recursion is a programming technique where a method calls itself to solve a problem. It involves breaking a complex problem into smaller, identical subproblems. Each recursive call handles a smaller part of the problem until a base case is reached, and the recursion stops.
+
+2. What is a base case in recursion, and why is it essential?
+    A base case is a condition that stops the recursive calls and prevents infinite recursion. It is essential to have a base case to ensure the recursion terminates and the function returns a result.
+
+3. Provide an example of a problem that can be solved using recursion.
+    The factorial calculation is a classic example of a problem solved using recursion. For example:
+   
+
+   public int factorial(int n) {
+       if (n == 0) {
+           return 1; // Base case
+       } else {
+           return n * factorial(n - 1); // Recursive call
+       }
+   }
+   

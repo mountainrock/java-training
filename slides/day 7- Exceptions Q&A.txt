@@ -1,0 +1,39 @@
+Question 1: What is an exception in Java?
+Answer: An exception in Java is an event that occurs during the execution of a program, which disrupts the normal flow of the program's instructions. It represents abnormal conditions that can occur during runtime, such as division by zero, null pointer access, and file not found.
+
+Question 2: What is the difference between checked and unchecked exceptions?
+Answer:
+- Checked Exceptions: These are checked at compile-time and must be either caught using try-catch blocks or declared in the method's signature using the `throws` keyword. Examples include `IOException` and `SQLException`.
+- Unchecked Exceptions (RuntimeExceptions): These are not checked at compile-time and don't need to be caught or declared. They are subclasses of `RuntimeException`. Examples include `NullPointerException`, `ArrayIndexOutOfBoundsException`, and `ArithmeticException`.
+
+Question 3: What is the purpose of the `try`, `catch`, and `finally` blocks?
+Answer: The `try` block is used to enclose the code that might throw an exception. The `catch` block is used to handle specific exceptions that are caught within the `try` block. The `finally` block contains code that is executed regardless of whether an exception occurred or not, and it's often used for resource cleanup.
+
+Question 4: How can you handle multiple exceptions in a single `catch` block?
+Answer: You can use a multi-catch block introduced in Java 7. It allows you to catch multiple exceptions using a single `catch` block. For example:
+
+try {
+    // code that may throw exceptions
+} catch (IOException | SQLException ex) {
+    // handle IOException or SQLException
+}
+
+Question 5: What is the purpose of the `throw` keyword in Java?
+Answer: The `throw` keyword is used to explicitly throw an exception. It is typically used when a specific condition occurs that indicates an error or an exceptional situation in your code. The thrown exception can then be caught and handled by appropriate catch blocks.
+
+Question 6: What is the difference between the `throws` and `throw` keywords?
+Answer:
+- The `throws` keyword is used in the method signature to declare that a method may throw a specific type of checked exception. It's used to indicate that the method may not handle the exception itself and is passing the responsibility to the caller.
+- The `throw` keyword is used inside a method to throw an exception explicitly, regardless of whether it's a checked or unchecked exception.
+
+Question 7: Can you have a `catch` block without a `try` block?
+Answer: No, a `catch` block must always be associated with a preceding `try` block. The purpose of the `catch` block is to handle exceptions that might occur within the corresponding `try` block.
+
+Question 8: What is the purpose of the `finally` block?
+Answer: The `finally` block is used to contain code that should be executed regardless of whether an exception occurred or not. It's often used for resource cleanup, such as closing files, releasing database connections, etc.
+
+Question 9: How can you create custom exceptions in Java?
+Answer: You can create custom exceptions by extending the built-in `Exception` class or its subclasses. This allows you to define application-specific exception classes with meaningful names and additional information to describe the exceptional situation.
+
+Question 10: Explain the concept of exception propagation.
+Answer: Exception propagation refers to the process of passing an exception from one method to another in the call stack. If an exception is not caught within a method, it's propagated to the calling method until it's caught or until it reaches the main method. If the exception is not caught at all, the program terminates and the exception is printed.

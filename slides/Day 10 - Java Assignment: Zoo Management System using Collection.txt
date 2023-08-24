@@ -1,0 +1,37 @@
+Java Assignment: Zoo Management System using Collections
+
+In this assignment, you will enhance the Zoo Management System program that you previously developed by incorporating Java Collections to efficiently manage the animals and their details within the zoo. You will utilize different types of collections such as List, Set, and Map to organize and manipulate the data.
+
+Requirements:
+1. Animal Class:
+   - Modify the Animal class to include attributes like name, species, age, and any other relevant information.
+   - Implement appropriate constructor(s) and getter/setter methods.
+2. Zoo Class:
+   - Create a Zoo class that will manage the animals using collections.
+   - Implement instance variables to store animals, such as List for animals in the order of arrival, Set for unique species, and Map for quick access by name.
+   - Include methods to:
+     - Add animals to the zoo using different collections.
+     - Display the list of all animals.
+     - Display unique species present in the zoo.
+     - Search for an animal by its name and display its details.
+3. Main Class:
+   - Create a Main class that will serve as the entry point of the program.
+   - In the main method, instantiate the Zoo class and demonstrate the functionalities.
+   - Add animals using the different collections and display the results.
+Implementation Tips:
+- Utilize ArrayList or LinkedList for maintaining the list of animals in the order of arrival.
+- Use a HashSet to keep track of unique species present in the zoo.
+- Employ a HashMap to quickly search for animals by their names.
+- For each functionality, write separate methods in the Zoo class.
+
+Assignment Submission:
+1. Implement the code following the requirements.
+2. Comment your code to explain key decisions and functionalities.
+3. Create a brief documentation describing the usage of different collections in your program.
+4. Include any necessary instructions to run the program.
+5. Prepare UML diagram using https://online.visual-paradigm.com/drive/#diagramlist:proj=0&dashboard
+
+Note:
+- The objective of this assignment is to enhance your understanding of using different Java Collections to manage and manipulate data effectively.
+- Ensure that your program demonstrates proper encapsulation, object-oriented principles, and good coding practices.
+- You are encouraged to go beyond the minimum requirements if you'd like to add more functionalities.

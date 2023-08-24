@@ -1,0 +1,40 @@
+Queue :
+1. What is a Queue?
+   A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle, where the first element added is the first one to be removed.
+2. What are the basic operations on a Queue?
+   The basic operations on a queue are enqueue (to add an element to the back) and dequeue (to remove an element from the front).
+3. What are some real-world examples of a Queue?
+   Examples include a line of people waiting for a bus, print job queue in a printer, and handling tasks in the order they are received.
+4. What is a Priority Queue?
+   A priority queue is a variant of a queue where elements have associated priorities. Elements with higher priority are dequeued before those with lower priority.
+
+Deque :
+1. What is a Deque?
+   A deque (double-ended queue) is a data structure that allows insertion and deletion from both the front and the back.
+2. What are the advantages of using a Deque over a Queue?
+   A deque allows insertion and deletion at both ends, making it suitable for scenarios where elements need to be efficiently added or removed from both directions.
+3. How can a Deque be implemented using arrays?
+   A deque can be implemented using a circular array, where both front and rear pointers move in a circular manner within the array bounds.
+
+Stack:
+1. What is a Stack?
+   A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle, where the last element added is the first one to be removed.
+2. What are the basic operations on a Stack?
+   The basic operations on a stack are push (to add an element) and pop (to remove the top element).
+3. What are some real-world examples of a Stack?
+   Examples include a call stack in programming for function calls, browser history navigation, and undo/redo functionality in applications.
+4. What is an Expression Evaluation using a Stack?
+   A stack can be used to evaluate expressions, where operators and operands are pushed onto the stack and processed according to their precedence and associativity.
+
+Math
+1. What is a Math Utility class?
+A Math Utility class is a collection of static methods that provide various mathematical functions and algorithms to perform common calculations in programming.
+
+2. Why is a Math Utility class useful in programming?
+A Math Utility class encapsulates commonly used mathematical operations, promoting code reusability and ensuring consistent and accurate calculations throughout the application.
+
+3. What is the purpose of the factorial method in a Math Utility class?
+The factorial method calculates the factorial of a non-negative integer n. The factorial of n (denoted as n!) is the product of all positive integers from 1 to n.
+
+4. How does the isPrime method determine if a number is prime?
+The isPrime method checks if a given positive integer num is divisible by any integer between 2 and the square root of num. If no divisors are found, the number is considered prime.

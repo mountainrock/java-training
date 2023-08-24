@@ -1,0 +1,42 @@
+
+Introduction to Wrapper Classes:
+1.  What are wrapper classes in Java?
+    Wrapper classes are classes that provide a way to convert primitive data types into objects. They allow primitives to be used in collections and other situations requiring objects.
+2.  List the eight primitive data types in Java.
+    `byte`, `short`, `int`, `long`, `float`, `double`, `char`, and `boolean`.
+3.  What is autoboxing and unboxing?
+    Autoboxing is the automatic conversion of primitive data types to their corresponding wrapper classes. Unboxing is the reverse process.
+
+Wrapper Classes (Byte, Short, Integer, Long, Float, Double, Character, Boolean):
+4.  What's the purpose of the `Integer` class in Java?
+    The `Integer` class wraps an `int` primitive type, providing methods to perform operations and conversions on integer values.
+5.  How can you convert a `String` to an `int` using `Integer` class methods?
+    Use the `parseInt` method: `int number = Integer.parseInt("42");`
+6.  How can you convert an `int` to a `String` using `Integer` class methods?
+    Use the `toString` method: `String str = Integer.toString(42);`
+
+ Inner Classes:
+7.  What are inner classes in Java?
+    Inner classes are classes defined within the scope of other classes. They can access members of the outer class and provide better encapsulation.
+
+Member Inner Class:
+8.  How can you access a member inner class from the outer class?
+    You can directly access it using the syntax: `OuterClass.InnerClass obj = outerObj.new InnerClass();` **
+9.  What's the advantage of using a member inner class?
+    Member inner classes have access to the outer class's private members and can improve encapsulation.
+
+Static Inner Class:
+10.  How is a static inner class different from a member inner class?
+     A static inner class is associated with the outer class, not with an instance. It doesn't have access to non-static members of the outer class.
+
+Local Inner Class:
+11.  Where can you define a local inner class?
+     You can define a local inner class within a method or a code block.
+12.  What's the scope of a local inner class?
+     The scope of a local inner class is limited to the method or block where it's defined.
+
+Anonymous Inner Class:
+13.  What's the purpose of an anonymous inner class?
+     Anonymous inner classes are used for implementing interfaces or extending classes without creating separate class files.
+14.  How is an anonymous inner class created and used?
+     Anonymous inner classes are instantiated directly where needed, and methods can be overridden or implemented inline.

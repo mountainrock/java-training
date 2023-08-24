@@ -1,0 +1,42 @@
+Questions and answers related to Inheritance, Packages, Methods, and Polymorphism:
+
+Inheritance:
+
+What is inheritance in Java?
+    Inheritance is a fundamental concept in object-oriented programming where a class (subclass) inherits properties and behaviors (fields and methods) from another class (superclass or base class).
+What are the benefits of inheritance?
+    Inheritance promotes code reusability, allows creating specialized classes from a general class, and supports the concept of "is-a" relationship between classes.
+How is multiple inheritance achieved in Java?
+    Java supports single inheritance (one class can extend only one superclass). Multiple inheritance can be simulated using interfaces, where a class can implement multiple interfaces.
+
+Packages:
+
+What is a package in Java?
+    A package is a way to organize related classes and interfaces into a single unit. It helps avoid naming conflicts and provides a hierarchical structure to the code.
+How do you import classes from another package?
+    You can use the `import` statement to import classes from another package. For example: `import com.example.MyClass;`.
+What is the default package in Java?
+    The default package is a package where classes are placed if no package is explicitly defined. It's not recommended to use the default package for real projects.
+
+Methods:
+
+What is a method in Java?
+    A method is a block of code that performs a specific task. Methods are defined within classes and can be called to execute their functionality.
+What is method overloading?
+    Method overloading occurs when multiple methods in the same class have the same name but different parameter lists (different number or types of parameters).
+What is method overriding?
+    Method overriding is a feature in Java where a subclass provides a specific implementation for a method that is already defined in its superclass.
+
+Polymorphism:
+
+What is polymorphism in Java?
+    Polymorphism is the ability of different classes to be treated as instances of the same class through inheritance. It enables one interface or method to be used for different data types.
+What is compile-time polymorphism?
+    Compile-time polymorphism is achieved through method overloading. The compiler determines which method to call based on the method name and parameter list.
+What is runtime polymorphism?
+    Runtime polymorphism is achieved through method overriding. The method to be executed is determined at runtime based on the actual type of the object.
+What is an abstract class?
+    An abstract class is a class that cannot be instantiated and is used as a base class for other classes. It may contain abstract methods that must be implemented by its subclasses.
+What is an interface?
+    An interface is a collection of abstract methods that define a contract for implementing classes. A class can implement multiple interfaces, enabling multiple inheritance-like behavior.
+

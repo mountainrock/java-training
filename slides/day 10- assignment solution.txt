@@ -1,0 +1,92 @@
+import java.util.*;
+
+class Animal {
+    private String name;
+    private String species;
+    private int age;
+
+    public Animal(String name, String species, int age) {
+        this.name = name;
+        this.species = species;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public String toString() {
+        return name + " (" + species + ", " + age + " years)";
+    }
+}
+
+class Zoo {
+    private List<Animal> animalsList;
+    private Set<String> uniqueSpeciesSet;
+    private Map<String, Animal> animalByNameMap;
+
+    public Zoo() {
+        animalsList = new ArrayList<>();
+        uniqueSpeciesSet = new HashSet<>();
+        animalByNameMap = new HashMap<>();
+    }
+
+    public void addAnimal(String name, String species, int age) {
+        Animal animal = new Animal(name, species, age);
+        animalsList.add(animal);
+        uniqueSpeciesSet.add(species);
+        animalByNameMap.put(name, animal);
+    }
+
+    public void displayAllAnimals() {
+        System.out.println("All Animals in the Zoo:");
+        for (Animal animal : animalsList) {
+            System.out.println(animal);
+        }
+    }
+
+    public void displayUniqueSpecies() {
+        System.out.println("Unique Species in the Zoo:");
+        for (String species : uniqueSpeciesSet) {
+            System.out.println(species);
+        }
+    }
+
+    public void searchAnimalByName(String name) {
+        if (animalByNameMap.containsKey(name)) {
+            System.out.println("Animal Details: " + animalByNameMap.get(name));
+        } else {
+            System.out.println("Animal not found.");
+        }
+    }
+}
+
+public class ZooManagement {
+    public static void main(String[] args) {
+        Zoo zoo = new Zoo();
+
+        zoo.addAnimal("Lion", "Mammal", 5);
+        zoo.addAnimal("Elephant", "Mammal", 10);
+        zoo.addAnimal("Giraffe", "Mammal", 7);
+        zoo.addAnimal("Tiger", "Mammal", 4);
+        zoo.addAnimal("Penguin", "Bird", 2);
+
+        zoo.displayAllAnimals();
+        System.out.println();
+
+        zoo.displayUniqueSpecies();
+        System.out.println();
+
+        zoo.searchAnimalByName("Elephant");
+        zoo.searchAnimalByName("Crocodile");
+    }
+}

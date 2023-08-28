@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<img id="img1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Duke.svg/1222px-Duke.svg.png?20100115121905" height="200px">
+
+<button id="animateBtn" >Animate</button>
+</body>
+</html>
+
+<script>
+	
+   $(document).ready(function() {
+	   
+	   $("#animateBtn").click(function(){
+		  var i=0;
+		  while(i<10){
+			   setTimeout($("#img1").fadeOut(), 5000);
+			   setTimeout($("#img1").fadeIn(), 5000);
+			   i++;
+		  }
+	      });
+      
+    });
+    
+	
+</script>

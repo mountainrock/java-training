@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Mobile App Example</title>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<!-- Page 1: Home Page -->
+<div data-role="page" id="home">
+  <div data-role="header">
+    <h1>Welcome to jQuery Mobile App Page 1</h1>
+  </div>
+  <div data-role="content">
+    <p>This is the home page of our jQuery Mobile app.</p>
+    <a href="#page2" data-role="button" data-transition="slide">Go to Page 2</a>
+  </div>
+  <div data-role="footer">
+    <h4>&copy; 2023 jQuery Mobile App</h4>
+  </div>
+</div>
+
+<!-- Page 2: Dynamic Content Page -->
+<div data-role="page" id="page2">
+  <div data-role="header">
+    <h1>Dynamic Content Page 2 </h1>
+  </div>
+  <div data-role="content">
+    <h2>Dynamic Content</h2>
+    <p id="dynamicContent">Loading...</p>
+    <a href="#home" data-role="button" data-transition="slide">Go back to Home</a>
+  </div>
+</div>
+
+<script>
+  // Fetch dynamic content using AJAX
+  $(document).on("pagecreate", "#page2", function() {
+    $.ajax({
+      url: "https://jsonplaceholder.typicode.com/posts/1",
+      method: "GET",
+      success: function(data) {
+        $("#dynamicContent").html("<strong>Title:</strong> " + data.title + "<br><strong>Body:</strong> " + data.body);
+      },
+      error: function() {
+        $("#dynamicContent").text("Error loading content.");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Animation Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<button id="fadeIn">Fade In</button>
+<button id="fadeOut">Fade Out</button>
+<div id="box"></div>
+
+<script>
+$(document).ready(function() {
+  $('#fadeIn').click(function() {
+    $('#box').fadeIn();
+  });
+
+  $('#fadeOut').click(function() {
+    $('#box').fadeOut();
+  });
+});
+</script>
+
+</body>
+</html>

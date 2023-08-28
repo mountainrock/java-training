@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .selected {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery Example</h1>
+
+  <ul>
+    <li><a href="#">Item 1</a></li>
+    <li><a href="#">Item 2</a></li>
+    <li><a href="#">Item 3</a></li>
+  </ul>
+
+<input type="text" id="input1" value="100"/>
+
+  <button id="changeText">Change Text</button>
+  <div id="content">Initial Content</div>
+
+  <h2>AJAX Example</h2>
+  <button id="loadData">Load Data</button>
+  <div id="dataContainer"></div>
+
+  <script>
+    // jQuery Selectors and Event Handling
+    $(document).ready(function() {
+      $('a').click(function(event) {
+        event.preventDefault();
+        $(this).addClass('selected').siblings().removeClass('selected');
+      });
+
+      $('#changeText').click(function() {
+        $('#content').text('New Content');
+      });
+    });
+
+    // AJAX Example
+    $('#loadData').click(function() {
+      $.ajax({
+        url: 'https://jsonplaceholder.typicode.com/posts/1',
+        method: 'GET',
+        success: function(data) {
+          $('#dataContainer').html('<strong>Title:</strong> ' + data.title + '<br><strong>Body:</strong> ' + data.body);
+        },
+        error: function() {
+          $('#dataContainer').text('Error loading data.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

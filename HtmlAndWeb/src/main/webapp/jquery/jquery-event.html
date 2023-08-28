@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+<button id="clickMe">Click Me!</button>
+<p>This is a paragraph.</p>
+
+<script>
+$(document).ready(function() {
+  // Event handling
+  $('#clickMe').click(function() {
+    $('p').addClass('highlight').text('Button clicked!');
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-package com.bri8;
+package com.bri8.controller;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;

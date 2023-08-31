@@ -4,7 +4,7 @@
     <description></description>
     <display-name>HelloServlet</display-name>
     <servlet-name>HelloServlet</servlet-name>
-    <servlet-class>com.bri8.HelloServlet</servlet-class>
+    <servlet-class>com.bri8.controller.HelloServlet</servlet-class>
   </servlet>
   
   <servlet-mapping>

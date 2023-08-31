@@ -1,0 +1,76 @@
+1. Create a Main Page Component:
+- Create the main page component:
+
+ng generate component main-page
+
+2. Set Up the Main Page:
+- Open src/app/main-page/main-page.component.html and add some content for the main page:
+
+<div class="main-container">
+  <h2>Welcome to the Main Page!</h2>
+  <p>Hello, {{ username }}!</p>
+</div>
+
+3. Implement Routing:
+- Open src/app/app-routing.module.ts and configure routing for the login and main page:
+
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { MainPageComponent } from './main-page/main-page.component';
+const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'main-page', component: MainPageComponent },
+];
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+4. Implement Login Logic:
+- Open src/app/login/login.component.ts and update the login method to navigate to the main page on successful login:
+
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent {
+  username: string = '';
+  password: string = '';
+  constructor(private router: Router) {}
+  login() {
+    // Perform authentication logic here
+    if (this.username === 'demo' && this.password === 'demo') {
+      this.router.navigate(['/main-page']);
+    } else {
+      alert('Login failed');
+    }
+  }
+}
+
+5. Style the Main Page:
+- Open src/app/main-page/main-page.component.css and add some basic styles:
+
+.main-container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+6. Update the AppComponent:
+- Open src/app/app.component.html and replace the existing content with the router outlet:
+
+<router-outlet></router-outlet>
+
+7. Run the Application:
+- Open a terminal and run:
+
+ng serve

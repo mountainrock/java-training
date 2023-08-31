@@ -1,0 +1,76 @@
+
+1. Create the app for first time 
+    ng new my-login
+
+2. Create Components:
+- Create the login component:
+cd my-login
+ng generate component login
+
+3. Set Up the Login Form:
+- Open src/app/login/login.component.html and add a basic login form:
+
+<div class="login-container">
+  <h2>Login</h2>
+  <form (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" [(ngModel)]="username" name="username" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
+
+4. Implement Login Logic:
+- Open src/app/login/login.component.ts and add the logic to handle the login form submission:
+
+import { Component } from '@angular/core';
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent {
+  username: string = '';
+  password: string = '';
+  login() {
+    // Perform authentication logic here
+    if (this.username === 'user' && this.password === 'password') {
+      alert('Login successful');
+    } else {
+      alert('Login failed');
+    }
+  }
+}
+
+5. Style the Login Form:
+- Open src/app/login/login.component.css and add some basic styles:
+
+.login-container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.btn {
+  display: block;
+  width: 100%;
+}
+
+6. Integrate the LoginComponent:
+- Open src/app/app.component.html and replace the existing content with:
+<app-login></app-login>
+
+7. Run the Application:
+- Open a terminal and run:
+
+ng serve
